@@ -11,6 +11,8 @@ public class NewMain {
      * @throws java.lang.InterruptedException
      */
     public static void main(String[] args) throws InterruptedException {
+        public static int RUN = 0;
+        
         Contatori c1 = new Contatori(1);
         Contatori c2 = new Contatori(2);
         Contatori c3 = new Contatori(3);
@@ -26,12 +28,12 @@ public class NewMain {
         t1.start();
         t2.start();
         t3.start();
+        
+        RUN = 1;
 
         Thread.sleep(5000);
-
-        c1.setRun(false);
-        c2.setRun(false);
-        c3.setRun(false);
+        
+        RUN = 2;
 
         //t1.stop();
         //t2.stop();
